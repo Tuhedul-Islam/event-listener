@@ -22,10 +22,15 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
         UserRegistered::class => [
             SendWelcomeMail::class,
-            SendAdminMail::class,
-            NewSubscriber::class,
+            //SendAdminMail::class,
+            //NewSubscriber::class,
+        ],
+
+        \App\Events\UserSaving::class => [
+            \App\Listeners\SaveUser::class,
         ],
     ];
 

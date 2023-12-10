@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class SubscriberController extends Controller
 {
-    public function subscribe(Request $request){
+    public function store(Request $request){
         try {
             //validate the request data
             $validator = Validator::make($request->all(), [

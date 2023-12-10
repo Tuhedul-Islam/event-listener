@@ -1,0 +1,4 @@
+1. In User model---Dispatch event from model automatically
+2. In Subscriber model---call event manually from controller store method
+
+*** use global event() method or Event::fire() facade
