@@ -27,6 +27,8 @@ class UserController extends Controller
                 'password'=> bcrypt('password'),
             ]);
 
+            //Then call event from Model $dispatchesEvents[]; check Model
+
             return new JsonResponse(['success' => true, 'message' => "Thank you for creating the User!", 'user'=> $user->toArray()], 200);
         }catch(\Throwable $th){
             return new JsonResponse(['error' => true, 'message' => "Error!"], 404);
